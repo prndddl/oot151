@@ -5,7 +5,7 @@ from pathlib import Path
 import yaml
 
 
-CUSTOM_TEMPLATE = "data/customTemplate.yaml"
+INPUT_TEMPLATE  = "input/customTemplate.yaml"
 POKEMON_DATA    = "data/pokemon_data.csv"
 OUTPUT_DIR     = "output"
 
@@ -21,7 +21,7 @@ def generate_yamls():
     
     for p in pokemon:
         # Reload the template each time
-        with open(CUSTOM_TEMPLATE, 'r') as f:
+        with open(INPUT_TEMPLATE, 'r') as f:
             print(f'Generating YAML for {p.name} (ID: {p.id})')
             generate_yaml(p, f)
 
